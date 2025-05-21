@@ -3,11 +3,11 @@
 int cellvalue(int d[5][5], int f[3][3], int i, int j)
 {
 	int val;
-	for(int x = 0, di = i; x < 3; x++, di++)
+	for(int x = 0; x < 3; x++)
 	{
-		for(int y = 0, dj = j; y < 3; y++, dj++)
+		for(int y = 0; y < 3; y++)
 		{
-			val += d[di][dj] * f[x][y];
+			val += d[i + x][j + y] * f[x][y];
 		}
 	}
 	return val;
